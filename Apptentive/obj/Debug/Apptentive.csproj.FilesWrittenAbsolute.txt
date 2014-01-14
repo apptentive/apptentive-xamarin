@@ -1,0 +1,10 @@
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/Apptentive/Apptentive/obj/Debug/MonoTouch,Version=v1.0.AssemblyAttribute.cs
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/Apptentive/Apptentive/bin/Debug/Apptentive.dll.mdb
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/Apptentive/Apptentive/bin/Debug/Apptentive.dll
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/Apptentive/Apptentive/obj/Debug/Apptentive.dll
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/Apptentive/Apptentive/obj/Debug/Apptentive.dll.mdb
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/apptentive-xamarin/Apptentive/obj/Debug/MonoTouch,Version=v1.0.AssemblyAttribute.cs
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/apptentive-xamarin/Apptentive/bin/Debug/Apptentive.dll.mdb
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/apptentive-xamarin/Apptentive/bin/Debug/Apptentive.dll
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/apptentive-xamarin/Apptentive/obj/Debug/Apptentive.dll
+/Users/pkamb/Desktop/Apptentive Code/Xamarin/apptentive-xamarin/Apptentive/obj/Debug/Apptentive.dll.mdb
