@@ -37,7 +37,7 @@ namespace ApptentiveDemo
 			this.View.BackgroundColor = UIColor.Purple;
 
 			//Apptentive testing
-			ATConnect sharedConnection = new ATConnect().SharedConnection;
+			ATConnect sharedConnection = ATConnect.SharedConnection;
 			sharedConnection.InitialUserEmailAddress = "peter@apptentive.com";
 			Console.WriteLine("InitialUserEmailAddress: " + sharedConnection.InitialUserEmailAddress);
 		}

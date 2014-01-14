@@ -51,6 +51,6 @@ Global
 		{8B3417D0-85A7-498D-B7F5-285EC1DF715C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Apptentive\Apptentive.csproj
+		StartupItem = ApptentiveDemo\ApptentiveDemo.csproj
 	EndGlobalSection
 EndGlobal

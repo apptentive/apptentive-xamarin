@@ -5,36 +5,6 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 namespace Apptentive {
-	[BaseType (typeof (NSObject), Name ="ATConnect")]
-	public partial interface ATConnect {
-
-		[Export ("apiKey")]
-		string ApiKey { get; set; }
-
-		[Export ("showTagline")]
-		bool ShowTagline { get; set; }
-
-		[Export ("showEmailField")]
-		bool ShowEmailField { get; set; }
-
-		[Export ("initialUserName")]
-		string InitialUserName { get; set; }
-
-		[Export ("initialUserEmailAddress")]
-		string InitialUserEmailAddress { get; set; }
-
-		[Export ("customPlaceholderText")]
-		string CustomPlaceholderText { get; set; }
-
-		[Export ("sharedConnection")]
-		ATConnect SharedConnection { get; }
-
-	}
-}
-
-/*
-namespace Apptentive
-{
 	// The first step to creating a binding is to add your native library ("libNativeLibrary.a")
 	// to the project by right-clicking (or Control-clicking) the folder containing this source
 	// file and clicking "Add files..." and then simply select the native library (or libraries)
@@ -91,5 +61,83 @@ namespace Apptentive
 	//
 	// For more information, see http://docs.xamarin.com/ios/advanced_topics/binding_objective-c_libraries
 	//
+	[BaseType (typeof (NSObject))]
+	public partial interface ATConnect {
+		[Notification]
+		[Field ("ATMessageCenterUnreadCountChangedNotification", "__Internal")]
+		NSString DidStartNotification { get; }
+
+		[Field("ATIntegrationKeyUrbanAirship", "__Internal")]
+		NSString ATIntegrationKeyUrbanAirship { get; }
+
+		[Static, Export ("sharedConnection")]
+		ATConnect SharedConnection { get; }
+
+		[Export ("apiKey")]
+		string ApiKey { get; set; }
+
+		[Export ("unreadMessageCount")]
+		string UnreadMessageCount { get; set; }
+
+		[Export ("presentMessageCenterFromViewController:")]
+		void PresentMessageCenter (UIViewController viewController);
+
+		[Export ("engage:fromViewController:")]
+		void Engage (string appLaunch, UIViewController viewController);
+
+		[Export ("didReceiveRemoteNotification:fromViewController:")]
+		void DidReceiveRemoteNotification (NSDictionary userInfo, UIViewController viewController);
+
+		[Export ("addIntegration:withConfiguration:")]
+		void AddIntegration (NSString integration, NSDictionary configuration);
+
+		[Export ("showTagline")]
+		bool ShowTagline { get; set; }
+
+		[Export ("showEmailField")]
+		bool ShowEmailField { get; set; }
+
+		[Export ("initialUserName")]
+		string InitialUserName { get; set; }
+
+		[Export ("initialUserEmailAddress")]
+		string InitialUserEmailAddress { get; set; }
+
+		[Export ("customPlaceholderText")]
+		string CustomPlaceholderText { get; set; }
+	}
+
+	[BaseType (typeof (NSObject))]
+	public partial interface ATAppRatingFlow {
+		[Static, Export ("sharedRatingFlow")]
+		ATAppRatingFlow SharedConnection ();
+
+		[Export ("appID")]
+		string AppID { get; set; }
+
+		[Export ("showRatingFlowFromViewControllerIfConditionsAreMet:")]
+		void ShowRatingFlowIfConditionsAreMet (UIViewController viewController);
+
+		[Export ("logSignificantEvent")]
+		void LogSignificantEvent ();
+	}
+
+	[BaseType (typeof (NSObject))]
+	public partial interface ATSurveys {
+		[Notification]
+		[Field ("ATSurveyNewSurveyAvailableNotification", "__Internal")]
+		NSString DidStartNotification { get; }
+
+		[Export ("hasSurveyAvailableWithTags:")]
+		bool HasSurveyAvailable(NSSet tags);
+
+		[Export ("presentSurveyControllerWithTags:fromViewController:")]
+		void PresentSurveyController(NSSet tags, UIViewController viewController);
+
+		[Export ("hasSurveyAvailableWithNoTags")]
+		bool HasSurveyAvailableWithNoTags();
+
+		[Export ("presentSurveyControllerWithNoTagsFromViewController:")]
+		void PresentSurveyControllerWithNoTags(UIViewController viewController);
+	}
 }
-*/
