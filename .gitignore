@@ -1,0 +1,16 @@
+bin
+obj
+*.user*  
+*.pidb
+*.suo
+.DS_Store
+
+Android/Apptentive/Apptentive/bin/
+Android/Apptentive/Apptentive/obj/
+Ios/Apptentive/bin/
+Ios/Apptentive/obj/
+
+Android/Apptentive/ApptentiveDemo/bin/
+Android/Apptentive/ApptentiveDemo/obj/
+Ios/ApptentiveDemo/bin/
+Ios/ApptentiveDemo/obj/
