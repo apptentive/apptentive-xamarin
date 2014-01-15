@@ -1,9 +1,11 @@
 bin
 obj
-*.user*  
+Apptentive.userprefs
 *.pidb
 *.suo
 .DS_Store
+
+.gitignore*
 
 Android/Apptentive/Apptentive/bin/
 Android/Apptentive/Apptentive/obj/
