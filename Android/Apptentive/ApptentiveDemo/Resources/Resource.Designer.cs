@@ -393,9 +393,6 @@ namespace ApptentiveDemo
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070032
-			public const int MyButton = 2131165234;
-			
 			// aapt resource value: 0x7f070001
 			public const int about_description_link = 2131165185;
 			
@@ -494,6 +491,9 @@ namespace ApptentiveDemo
 			
 			// aapt resource value: 0x7f07000e
 			public const int image = 2131165198;
+			
+			// aapt resource value: 0x7f070032
+			public const int leave_feedback = 2131165234;
 			
 			// aapt resource value: 0x7f07001b
 			public const int message = 2131165211;

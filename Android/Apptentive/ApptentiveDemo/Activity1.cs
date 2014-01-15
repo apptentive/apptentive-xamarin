@@ -1,9 +1,4 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
+﻿using Android.App;
 using Android.Widget;
 using Android.OS;
 
@@ -18,8 +13,8 @@ namespace ApptentiveDemo
         {
             base.OnCreate( bundle );
             SetContentView( Resource.Layout.Main );
-            Button button = FindViewById<Button>( Resource.Id.MyButton );
 
+            Button button = FindViewById<Button>( Resource.Id.leave_feedback );
             button.Click += delegate
             {
                 Apptentive.ShowMessageCenter( this );
@@ -39,4 +34,3 @@ namespace ApptentiveDemo
         }
     }
 }
-
