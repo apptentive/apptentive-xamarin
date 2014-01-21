@@ -13,13 +13,45 @@ namespace ApptentiveDemo
 	partial class ApptentiveDemoViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIButton changeColorButton { get; set; }
+		MonoTouch.UIKit.UIButton messageCenterButton { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton ratingFlowButton { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton surveyNoTagsButton { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton surveyWithTagsButton { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton upgradeMessageButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (changeColorButton != null) {
-				changeColorButton.Dispose ();
-				changeColorButton = null;
+			if (messageCenterButton != null) {
+				messageCenterButton.Dispose ();
+				messageCenterButton = null;
+			}
+
+			if (ratingFlowButton != null) {
+				ratingFlowButton.Dispose ();
+				ratingFlowButton = null;
+			}
+
+			if (upgradeMessageButton != null) {
+				upgradeMessageButton.Dispose ();
+				upgradeMessageButton = null;
+			}
+
+			if (surveyNoTagsButton != null) {
+				surveyNoTagsButton.Dispose ();
+				surveyNoTagsButton = null;
+			}
+
+			if (surveyWithTagsButton != null) {
+				surveyWithTagsButton.Dispose ();
+				surveyWithTagsButton = null;
 			}
 		}
 	}

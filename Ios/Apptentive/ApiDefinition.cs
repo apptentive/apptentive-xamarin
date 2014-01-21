@@ -83,13 +83,50 @@ namespace Apptentive {
 		void PresentMessageCenter (UIViewController viewController);
 
 		[Export ("engage:fromViewController:")]
-		void Engage (string appLaunch, UIViewController viewController);
+		void Engage (string codePoint, UIViewController viewController);
 
 		[Export ("didReceiveRemoteNotification:fromViewController:")]
 		void DidReceiveRemoteNotification (NSDictionary userInfo, UIViewController viewController);
 
+		/*!
+ 		* Attach text, images, or files to the user's feedback.
+		* These attachments will appear in your online Apptentive dashboard,
+		* but will *not* appear in Message Center on the device.
+		*/
+		/*
+		//TODO: Enable in 1.2.6
+		[Export ("sendAttachmentText")]
+		void SendAttachmentText (NSString attachmentText);
+
+		[Export ("sendAttachmentImage")]
+		void SendAttachmentText (UIImage attachmentImage);
+
+		[Export ("sendAttachmentFile:withMimeType:")]
+		void SendAttachmentFile (NSData file, NSString mimeType);
+		*/
+
+		/*! Adds an additional data field to any feedback sent. Object should be an NSDate, NSNumber, or NSString. */
+		[Export ("addCustomPersonData:withKey:")]
+		void AddCustomPersonData (NSObject personData, NSString key);
+
+		[Export ("addCustomDeviceData:withKey:")]
+		void AddCustomDeviceData (NSObject deviceData, NSString key);
+
+
+		/*! Removes an additional data field from the feedback sent. */
+		[Export ("removeCustomPersonDataWithKey:")]
+		void RemoveCustomPersonData (NSString key);
+
+		[Export ("removeCustomDeviceDataWithKey:")]
+		void RemoveCustomDeviceData (NSString key);
+
+
+		/*! Add or remove a token for 3rd-party integration services. */
 		[Export ("addIntegration:withConfiguration:")]
 		void AddIntegration (NSString integration, NSDictionary configuration);
+
+		[Export ("removeIntegration:")]
+		void RemoveIntegration (NSString key);
 
 		[Export ("showTagline")]
 		bool ShowTagline { get; set; }
@@ -110,7 +147,7 @@ namespace Apptentive {
 	[BaseType (typeof (NSObject))]
 	public partial interface ATAppRatingFlow {
 		[Static, Export ("sharedRatingFlow")]
-		ATAppRatingFlow SharedConnection ();
+		ATAppRatingFlow SharedRatingFlow { get; }
 
 		[Export ("appID")]
 		string AppID { get; set; }
@@ -128,16 +165,16 @@ namespace Apptentive {
 		[Field ("ATSurveyNewSurveyAvailableNotification", "__Internal")]
 		NSString DidStartNotification { get; }
 
-		[Export ("hasSurveyAvailableWithTags:")]
+		[Static, Export ("hasSurveyAvailableWithTags:")]
 		bool HasSurveyAvailable(NSSet tags);
 
-		[Export ("presentSurveyControllerWithTags:fromViewController:")]
+		[Static, Export ("presentSurveyControllerWithTags:fromViewController:")]
 		void PresentSurveyController(NSSet tags, UIViewController viewController);
 
-		[Export ("hasSurveyAvailableWithNoTags")]
+		[Static, Export ("hasSurveyAvailableWithNoTags")]
 		bool HasSurveyAvailableWithNoTags();
 
-		[Export ("presentSurveyControllerWithNoTagsFromViewController:")]
+		[Static, Export ("presentSurveyControllerWithNoTagsFromViewController:")]
 		void PresentSurveyControllerWithNoTags(UIViewController viewController);
 	}
 }
