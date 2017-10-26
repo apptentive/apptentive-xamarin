@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Com.Apptentive.Android.Sdk;
 
 namespace ApptentiveSample
 {
@@ -18,9 +19,11 @@ namespace ApptentiveSample
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.myButton);
+            Button button = FindViewById<Button>(Resource.Id.messageCenterButton);
 
-            button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            button.Click += delegate {
+                Apptentive.ShowMessageCenter(this);
+            };
         }
     }
 }

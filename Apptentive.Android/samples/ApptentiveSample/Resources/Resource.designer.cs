@@ -3509,6 +3509,9 @@ namespace ApptentiveSample
 			// aapt resource value: 0x7f0800b0
 			public const int message = 2131230896;
 			
+			// aapt resource value: 0x7f0800ff
+			public const int messageCenterButton = 2131230975;
+			
 			// aapt resource value: 0x7f0800ef
 			public const int message_center_badge_counter = 2131230959;
 			
@@ -3532,9 +3535,6 @@ namespace ApptentiveSample
 			
 			// aapt resource value: 0x7f08002b
 			public const int multiply = 2131230763;
-			
-			// aapt resource value: 0x7f0800ff
-			public const int myButton = 2131230975;
 			
 			// aapt resource value: 0x7f0800f9
 			public const int navigation_header_container = 2131230969;
