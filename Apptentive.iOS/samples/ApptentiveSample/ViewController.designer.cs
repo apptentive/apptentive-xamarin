@@ -17,10 +17,6 @@ namespace ApptentiveSample
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton MessageCenterButton { get; set; }
 
-        [Action ("UIButton197_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton197_TouchUpInside (UIKit.UIButton sender);
-
         void ReleaseDesignerOutlets ()
         {
             if (MessageCenterButton != null) {

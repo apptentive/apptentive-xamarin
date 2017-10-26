@@ -19,20 +19,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="210" y="285" width="180" height="30"/>
+                                <rect key="frame" x="97.5" y="318.5" width="180" height="30"/>
                                 <state key="normal" title="Show Message Center">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="UIButton197_TouchUpInside:" destination="BYZ-38-t0r" id="204" eventType="touchUpInside"/>
-                                </connections>
+                                <connections/>
+                                <constraints>
+                                    <constraint id="1433" firstItem="197" firstAttribute="height" constant="30"/>
+                                    <constraint id="1434" firstItem="197" firstAttribute="width" constant="180"/>
+                                </constraints>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint id="209" firstItem="197" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="265"/>
-                            <constraint id="210" firstItem="wfy-db-euE" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="285"/>
-                            <constraint id="211" firstItem="197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="190"/>
-                            <constraint id="212" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="197" secondAttribute="trailing" constant="190"/>
+                            <constraint id="1432" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="1435" firstItem="197" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -44,4 +44,7 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
 </document>
