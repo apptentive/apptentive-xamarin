@@ -1,6 +1,7 @@
 ﻿using System;
 
 using UIKit;
+using ApptentiveiOS;
 
 namespace ApptentiveSample
 {
@@ -15,6 +16,10 @@ namespace ApptentiveSample
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            MessageCenterButton.TouchUpInside += delegate {
+                Apptentive.Shared.PresentMessageCenterFromViewController(this);
+            };
         }
 
         public override void DidReceiveMemoryWarning()

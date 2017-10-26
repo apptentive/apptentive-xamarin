@@ -4,7 +4,7 @@ using ObjCRuntime;
 using UIKit;
 using UserNotifications;
 
-namespace Apptentive.iOS
+namespace ApptentiveiOS
 {
     // typedef void (^ApptentiveAuthenticationFailureCallback)(ApptentiveAuthenticationFailureReason, NSString * _Nonnull);
     delegate void ApptentiveAuthenticationFailureCallback(ApptentiveAuthenticationFailureReason arg0, string arg1);
@@ -207,14 +207,6 @@ namespace Apptentive.iOS
         [NullAllowed, Export("appID")]
         string AppID { get; set; }
 
-        [Wrap("WeakDelegate")]
-        [NullAllowed]
-        ApptentiveDelegate Delegate { get; set; }
-
-        // @property (nonatomic, weak) id<ApptentiveDelegate> _Nullable delegate __attribute__((deprecated("")));
-        [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
-        NSObject WeakDelegate { get; set; }
-
         // -(BOOL)engage:(NSString * _Nonnull)event fromViewController:(UIViewController * _Nullable)viewController;
         [Export("engage:fromViewController:")]
         bool Engage(string @event, [NullAllowed] UIViewController viewController);
@@ -374,16 +366,6 @@ namespace Apptentive.iOS
         // @property (assign, nonatomic) ApptentiveLogLevel logLevel;
         [Export("logLevel", ArgumentSemantic.Assign)]
         ApptentiveLogLevel LogLevel { get; set; }
-    }
-
-    // @protocol ApptentiveDelegate <NSObject>
-    [Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    interface ApptentiveDelegate
-    {
-        // @optional -(UIViewController * _Nonnull)viewControllerForInteractionsWithConnection:(Apptentive * _Nonnull)connection __attribute__((deprecated("")));
-        [Export("viewControllerForInteractionsWithConnection:")]
-        UIViewController ViewControllerForInteractionsWithConnection(Apptentive connection);
     }
 
     // @interface ApptentiveNavigationController : UINavigationController

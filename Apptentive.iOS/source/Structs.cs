@@ -1,7 +1,7 @@
 ﻿using System;
 using ObjCRuntime;
 
-namespace Apptentive.iOS
+namespace ApptentiveiOS
 {
     [Native]
     public enum ApptentiveAuthenticationFailureReason : ulong
