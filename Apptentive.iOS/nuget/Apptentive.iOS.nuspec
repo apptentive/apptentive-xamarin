@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Apptentive.iOS</id>
+    <title>Facebook SDK for Xamarin iOS</title>
+    <version>$version$</version>
+    <authors>Apptentive</authors>
+    <owners>Apptentive</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# bindings for Apptentive SDK</description>
+    <copyright>Copyright © Apptentive</copyright>
+    <projectUrl>https://components.xamarin.com/view/apptentiveios</projectUrl>
+    <licenseUrl>https://components.xamarin.com/license/apptentiveios</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/apptentive/apptentive-xamarin/master/icons/apptentive-ios_128x128.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="output/Apptentive.dll" target="lib/Apptentive.iOS" />
+  </files>
+</package>
