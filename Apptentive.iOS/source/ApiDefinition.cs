@@ -4,7 +4,7 @@ using ObjCRuntime;
 using UIKit;
 using UserNotifications;
 
-namespace ApptentiveiOS
+namespace ApptentiveSDK.iOS
 {
     // typedef void (^ApptentiveAuthenticationFailureCallback)(ApptentiveAuthenticationFailureReason, NSString * _Nonnull);
     delegate void ApptentiveAuthenticationFailureCallback(ApptentiveAuthenticationFailureReason arg0, string arg1);
