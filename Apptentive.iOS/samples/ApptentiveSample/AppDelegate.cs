@@ -22,7 +22,7 @@ namespace ApptentiveSample
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
             var configuration = ApptentiveConfiguration.ConfigurationWithApptentiveKey("IOS-IOSDEV-72fddbdfd560", "384a1f1b9a540039c67732393799a700");
-            Apptentive.RegisterWithConfiguration(configuration);
+            Apptentive.Register(configuration);
 
             return true;
         }

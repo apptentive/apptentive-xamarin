@@ -18,7 +18,7 @@ namespace ApptentiveSample
             // Perform any additional setup after loading the view, typically from a nib.
 
             MessageCenterButton.TouchUpInside += delegate {
-                Apptentive.Shared.PresentMessageCenterFromViewController(this);
+                Apptentive.Shared.PresentMessageCenter(this);
             };
         }
 

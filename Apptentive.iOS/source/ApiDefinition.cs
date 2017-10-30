@@ -7,7 +7,7 @@ using UserNotifications;
 namespace ApptentiveSDK.iOS
 {
     // typedef void (^ApptentiveAuthenticationFailureCallback)(ApptentiveAuthenticationFailureReason, NSString * _Nonnull);
-    delegate void ApptentiveAuthenticationFailureCallback(ApptentiveAuthenticationFailureReason arg0, string arg1);
+    delegate void ApptentiveAuthenticationFailureCallback(ApptentiveAuthenticationFailureReason reason, string message);
 
     [Static]
     partial interface Constants
@@ -180,11 +180,6 @@ namespace ApptentiveSDK.iOS
     [BaseType(typeof(NSObject))]
     interface Apptentive
     {
-        // +(instancetype _Nonnull)sharedConnection;
-        [Static]
-        [Export("sharedConnection")]
-        Apptentive SharedConnection();
-
         // @property (readonly, nonatomic, class) Apptentive * _Nonnull shared;
         [Static]
         [Export("shared")]
@@ -193,7 +188,7 @@ namespace ApptentiveSDK.iOS
         // +(void)registerWithConfiguration:(ApptentiveConfiguration * _Nonnull)configuration;
         [Static]
         [Export("registerWithConfiguration:")]
-        void RegisterWithConfiguration(ApptentiveConfiguration configuration);
+        void Register(ApptentiveConfiguration configuration);
 
         // @property (readonly, nonatomic) NSString * _Nonnull apptentiveKey;
         [Export("apptentiveKey")]
@@ -221,7 +216,7 @@ namespace ApptentiveSDK.iOS
 
         // -(BOOL)canShowInteractionForEvent:(NSString * _Nonnull)event;
         [Export("canShowInteractionForEvent:")]
-        bool CanShowInteractionForEvent(string @event);
+        bool CanShowInteraction(string @event);
 
         // +(NSDictionary * _Nonnull)extendedDataDate:(NSDate * _Nonnull)date;
         [Static]
@@ -231,17 +226,17 @@ namespace ApptentiveSDK.iOS
         // +(NSDictionary * _Nonnull)extendedDataLocationForLatitude:(double)latitude longitude:(double)longitude;
         [Static]
         [Export("extendedDataLocationForLatitude:longitude:")]
-        NSDictionary ExtendedDataLocationForLatitude(double latitude, double longitude);
+        NSDictionary ExtendedDataLocation(double latitude, double longitude);
 
         // +(NSDictionary * _Nonnull)extendedDataCommerceWithTransactionID:(NSString * _Nullable)transactionID affiliation:(NSString * _Nullable)affiliation revenue:(NSNumber * _Nullable)revenue shipping:(NSNumber * _Nullable)shipping tax:(NSNumber * _Nullable)tax currency:(NSString * _Nullable)currency commerceItems:(NSArray<NSDictionary *> * _Nullable)commerceItems;
         [Static]
         [Export("extendedDataCommerceWithTransactionID:affiliation:revenue:shipping:tax:currency:commerceItems:")]
-        NSDictionary ExtendedDataCommerceWithTransactionID([NullAllowed] string transactionID, [NullAllowed] string affiliation, [NullAllowed] NSNumber revenue, [NullAllowed] NSNumber shipping, [NullAllowed] NSNumber tax, [NullAllowed] string currency, [NullAllowed] NSDictionary[] commerceItems);
+        NSDictionary ExtendedDataCommerce([NullAllowed] string transactionID, [NullAllowed] string affiliation, [NullAllowed] NSNumber revenue, [NullAllowed] NSNumber shipping, [NullAllowed] NSNumber tax, [NullAllowed] string currency, [NullAllowed] NSDictionary[] commerceItems);
 
         // +(NSDictionary * _Nonnull)extendedDataCommerceItemWithItemID:(NSString * _Nullable)itemID name:(NSString * _Nullable)name category:(NSString * _Nullable)category price:(NSNumber * _Nullable)price quantity:(NSNumber * _Nullable)quantity currency:(NSString * _Nullable)currency;
         [Static]
         [Export("extendedDataCommerceItemWithItemID:name:category:price:quantity:currency:")]
-        NSDictionary ExtendedDataCommerceItemWithItemID([NullAllowed] string itemID, [NullAllowed] string name, [NullAllowed] string category, [NullAllowed] NSNumber price, [NullAllowed] NSNumber quantity, [NullAllowed] string currency);
+        NSDictionary ExtendedDataCommerce([NullAllowed] string itemID, [NullAllowed] string name, [NullAllowed] string category, [NullAllowed] NSNumber price, [NullAllowed] NSNumber quantity, [NullAllowed] string currency);
 
         // @property (readonly, nonatomic) BOOL canShowMessageCenter;
         [Export("canShowMessageCenter")]
@@ -249,15 +244,15 @@ namespace ApptentiveSDK.iOS
 
         // -(BOOL)presentMessageCenterFromViewController:(UIViewController * _Nullable)viewController;
         [Export("presentMessageCenterFromViewController:")]
-        bool PresentMessageCenterFromViewController([NullAllowed] UIViewController viewController);
+        bool PresentMessageCenter([NullAllowed] UIViewController viewController);
 
         // -(BOOL)presentMessageCenterFromViewController:(UIViewController * _Nullable)viewController withCustomData:(NSDictionary * _Nullable)customData;
         [Export("presentMessageCenterFromViewController:withCustomData:")]
-        bool PresentMessageCenterFromViewController([NullAllowed] UIViewController viewController, [NullAllowed] NSDictionary customData);
+        bool PresentMessageCenter([NullAllowed] UIViewController viewController, [NullAllowed] NSDictionary customData);
 
         // -(void)dismissMessageCenterAnimated:(BOOL)animated completion:(void (^ _Nullable)(void))completion;
         [Export("dismissMessageCenterAnimated:completion:")]
-        void DismissMessageCenterAnimated(bool animated, [NullAllowed] Action completion);
+        void DismissMessageCenter(bool animated, [NullAllowed] Action completion);
 
         // @property (readonly, nonatomic) NSUInteger unreadMessageCount;
         [Export("unreadMessageCount")]
@@ -289,19 +284,19 @@ namespace ApptentiveSDK.iOS
 
         // -(BOOL)didReceveUserNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
         [Export("didReceveUserNotificationResponse:withCompletionHandler:")]
-        bool DidReceveUserNotificationResponse(UNNotificationResponse response, Action completionHandler);
+        bool DidReceveUserNotification(UNNotificationResponse response, Action completionHandler);
 
         // -(void)sendAttachmentText:(NSString * _Nonnull)text;
         [Export("sendAttachmentText:")]
-        void SendAttachmentText(string text);
+        void SendAttachment(string text);
 
         // -(void)sendAttachmentImage:(UIImage * _Nonnull)image;
         [Export("sendAttachmentImage:")]
-        void SendAttachmentImage(UIImage image);
+        void SendAttachment(UIImage image);
 
         // -(void)sendAttachmentFile:(NSData * _Nonnull)fileData withMimeType:(NSString * _Nonnull)mimeType;
         [Export("sendAttachmentFile:withMimeType:")]
-        void SendAttachmentFile(NSData fileData, string mimeType);
+        void SendAttachment(NSData fileData, string mimeType);
 
         // @property (copy, nonatomic) NSString * _Nullable personName;
         [NullAllowed, Export("personName")]
@@ -313,35 +308,35 @@ namespace ApptentiveSDK.iOS
 
         // -(void)removeCustomPersonDataWithKey:(NSString * _Nonnull)key;
         [Export("removeCustomPersonDataWithKey:")]
-        void RemoveCustomPersonDataWithKey(string key);
+        void RemoveCustomPersonData(string key);
 
         // -(void)removeCustomDeviceDataWithKey:(NSString * _Nonnull)key;
         [Export("removeCustomDeviceDataWithKey:")]
-        void RemoveCustomDeviceDataWithKey(string key);
+        void RemoveCustomDeviceData(string key);
 
         // -(void)addCustomDeviceDataString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key;
         [Export("addCustomDeviceDataString:withKey:")]
-        void AddCustomDeviceDataString(string @string, string key);
+        void AddCustomDeviceData(string @string, string key);
 
         // -(void)addCustomDeviceDataNumber:(NSNumber * _Nonnull)number withKey:(NSString * _Nonnull)key;
         [Export("addCustomDeviceDataNumber:withKey:")]
-        void AddCustomDeviceDataNumber(NSNumber number, string key);
+        void AddCustomDeviceData(NSNumber number, string key);
 
         // -(void)addCustomDeviceDataBool:(BOOL)boolValue withKey:(NSString * _Nonnull)key;
         [Export("addCustomDeviceDataBool:withKey:")]
-        void AddCustomDeviceDataBool(bool boolValue, string key);
+        void AddCustomDeviceData(bool boolValue, string key);
 
         // -(void)addCustomPersonDataString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key;
         [Export("addCustomPersonDataString:withKey:")]
-        void AddCustomPersonDataString(string @string, string key);
+        void AddCustomPersonData(string @string, string key);
 
         // -(void)addCustomPersonDataNumber:(NSNumber * _Nonnull)number withKey:(NSString * _Nonnull)key;
         [Export("addCustomPersonDataNumber:withKey:")]
-        void AddCustomPersonDataNumber(NSNumber number, string key);
+        void AddCustomPersonData(NSNumber number, string key);
 
         // -(void)addCustomPersonDataBool:(BOOL)boolValue withKey:(NSString * _Nonnull)key;
         [Export("addCustomPersonDataBool:withKey:")]
-        void AddCustomPersonDataBool(bool boolValue, string key);
+        void AddCustomPersonData(bool boolValue, string key);
 
         // -(void)dismissAllInteractions:(BOOL)animated;
         [Export("dismissAllInteractions:")]
@@ -353,7 +348,7 @@ namespace ApptentiveSDK.iOS
 
         // -(void)logInWithToken:(NSString * _Nonnull)token completion:(void (^ _Nonnull)(BOOL, NSError * _Nonnull))completion;
         [Export("logInWithToken:completion:")]
-        void LogInWithToken(string token, Action<bool, NSError> completion);
+        void LogIn(string token, Action<bool, NSError> completion);
 
         // -(void)logOut;
         [Export("logOut")]
@@ -366,12 +361,6 @@ namespace ApptentiveSDK.iOS
         // @property (assign, nonatomic) ApptentiveLogLevel logLevel;
         [Export("logLevel", ArgumentSemantic.Assign)]
         ApptentiveLogLevel LogLevel { get; set; }
-    }
-
-    // @interface ApptentiveNavigationController : UINavigationController
-    [BaseType(typeof(UINavigationController))]
-    interface ApptentiveNavigationController
-    {
     }
 
     // @protocol ApptentiveStyle <NSObject>
