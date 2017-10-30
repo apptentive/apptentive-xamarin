@@ -39,6 +39,7 @@
     <remove-node path="/api/package[@name='com.apptentive.android.sdk.util']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk.util.image']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk.util.task']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.util.threading']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk.view']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk.widget']" />
 
@@ -53,6 +54,7 @@
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveViewExitType']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive.DateTime']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive.Version']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='BuildConfig']" />
 
     <!-- Normalize namespace -->
 	<attr path="/api/package[@name='com.apptentive.android.sdk']" name="managedName">ApptentiveSDK.Android</attr>
