@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.App;
 using Android.Runtime;
-using Com.Apptentive.Android.Sdk;
+using ApptentiveSDK.Android;
 
 namespace ApptentiveSample
 {

@@ -1,15 +1,13 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Com.Apptentive.Android.Sdk;
+using ApptentiveSDK.Android;
 
 namespace ApptentiveSample
 {
     [Activity(Label = "ApptentiveSample", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
