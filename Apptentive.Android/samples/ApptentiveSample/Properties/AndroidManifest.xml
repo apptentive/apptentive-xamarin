@@ -3,6 +3,10 @@
 	<uses-sdk android:minSdkVersion="16" />
 	<application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name">
 		<activity android:name=".UserDataActivity"
+			      android:label="User Data"
+                  android:theme="@style/ApptentiveTheme.Base.Versioned"/>
+		<activity android:name=".CustomDataActivity"
+			      android:label="Custom Data"
                   android:theme="@style/ApptentiveTheme.Base.Versioned"/>
 	</application>
 </manifest>

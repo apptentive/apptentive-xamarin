@@ -46,6 +46,12 @@ namespace ApptentiveSample
                 StartActivity(intent);
             };
 
+            var customDataButton = FindViewById<Button>(Resource.Id.customDataButton);
+            customDataButton.Click += delegate {
+                var intent = new Intent(this, typeof(CustomDataActivity));
+                StartActivity(intent);
+            };
+
             unreadMessagesTextView = FindViewById<TextView>(Resource.Id.unreadMessagesText);
             UpdateUnreadMessagesCount();
 
