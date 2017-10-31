@@ -15,12 +15,18 @@ namespace ApptentiveSample
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.messageCenterButton);
+            // Controls
+            var eventNameEditText = FindViewById<EditText>(Resource.Id.eventEditText);
 
-            button.Click += delegate {
+            var messageCenterButton = FindViewById<Button>(Resource.Id.messageCenterButton);
+            messageCenterButton.Click += delegate {
                 Apptentive.ShowMessageCenter(this);
+            };
+
+            var engageButton = FindViewById<Button>(Resource.Id.engageButton);
+            engageButton.Click += delegate {
+                var eventName = eventNameEditText.Text;
+                Apptentive.Engage(this, eventName);
             };
         }
     }
