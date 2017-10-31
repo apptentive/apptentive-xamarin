@@ -20,8 +20,7 @@
 	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction.model.survey']" />
 	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction.view.survey']" />
 	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.logic']" />
-    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']" />
-	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter.model']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter.model']" />
 	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter.view']" />
 	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter.view.holder']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.metric']" />
@@ -55,7 +54,16 @@
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive.DateTime']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive.Version']" />
 	<remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='BuildConfig']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='ApptentiveToastNotificationManager']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='MessageManager']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='MessagePollingWorker']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='OnListviewItemActionListener']" />
+
+	<!-- Remove deprecation -->
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive']/method[@name='setUnreadMessagesListener']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive']/method[@name='willShowInteraction']" />
 
     <!-- Normalize namespace -->
-	<attr path="/api/package[@name='com.apptentive.android.sdk']" name="managedName">ApptentiveSDK.Android</attr>
+	<attr path="/api/package[@name='com.apptentive.android.sdk']" name="managedName">ApptentiveSDK.Android</attr>   
+	<attr path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']" name="managedName">ApptentiveSDK.Android</attr>   
 </metadata>

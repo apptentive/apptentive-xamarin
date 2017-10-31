@@ -2,12 +2,15 @@
 using Android.Widget;
 using Android.OS;
 using ApptentiveSDK.Android;
+using System;
 
 namespace ApptentiveSample
 {
     [Activity(Label = "ApptentiveSample", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : Activity, IUnreadMessagesListener
     {
+        TextView unreadMessagesTextView;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,6 +31,23 @@ namespace ApptentiveSample
                 var eventName = eventNameEditText.Text;
                 Apptentive.Engage(this, eventName);
             };
+
+            unreadMessagesTextView = FindViewById<TextView>(Resource.Id.unreadMessagesText);
+            UpdateUnreadMessagesCount();
+
+            Apptentive.AddUnreadMessagesListener(this);
+        }
+
+        private void UpdateUnreadMessagesCount()
+        {
+            unreadMessagesTextView.Text = "Unread messages: " + Apptentive.UnreadMessageCount;
+        }
+
+        public void OnUnreadMessageCountChanged(int count)
+        {
+            RunOnUiThread(delegate () {
+                UpdateUnreadMessagesCount();
+            });
         }
     }
 }
