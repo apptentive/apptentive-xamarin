@@ -32,6 +32,13 @@ namespace ApptentiveSample
                 Apptentive.Engage(this, eventName);
             };
 
+            var canShowInteractionButton = FindViewById<Button>(Resource.Id.canShowInteractionButton);
+            canShowInteractionButton.Click += delegate {
+                var eventName = eventNameEditText.Text;
+                var canShowInteraction = Apptentive.CanShowInteraction(eventName);
+                Toast.MakeText(this, canShowInteraction ? "Yes" : "No", ToastLength.Long).Show();
+            };
+
             unreadMessagesTextView = FindViewById<TextView>(Resource.Id.unreadMessagesText);
             UpdateUnreadMessagesCount();
 

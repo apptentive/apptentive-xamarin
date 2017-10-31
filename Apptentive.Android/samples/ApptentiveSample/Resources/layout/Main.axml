@@ -18,6 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Show Message Center" />
+    <Button
+        android:text="Can Show Interaction?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/canShowInteractionButton" />
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
