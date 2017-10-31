@@ -46,7 +46,6 @@
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveBaseActivity']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveInternal']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveBaseActivity']" />
-    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveLog']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveLogTag']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveNotifications']" />
     <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveViewActivity']" />
