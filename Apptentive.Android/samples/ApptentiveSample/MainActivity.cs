@@ -52,6 +52,12 @@ namespace ApptentiveSample
                 StartActivity(intent);
             };
 
+            var authenticationButton = FindViewById<Button>(Resource.Id.authenticationButton);
+            authenticationButton.Click += delegate {
+                var intent = new Intent(this, typeof(LoginActivity));
+                StartActivity(intent);
+            };
+
             unreadMessagesTextView = FindViewById<TextView>(Resource.Id.unreadMessagesText);
             UpdateUnreadMessagesCount();
 

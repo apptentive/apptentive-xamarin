@@ -92,6 +92,7 @@
     <Compile Include="MyApplication.cs" />
     <Compile Include="UserDataActivity.cs" />
     <Compile Include="CustomDataActivity.cs" />
+    <Compile Include="LoginActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -109,6 +110,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\UserData.axml" />
     <AndroidResource Include="Resources\layout\CustomData.axml" />
+    <AndroidResource Include="Resources\layout\Login.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
