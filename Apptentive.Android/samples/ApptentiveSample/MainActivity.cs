@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 using ApptentiveSDK.Android;
 using System;
+using Android.Content;
 
 namespace ApptentiveSample
 {
@@ -37,6 +38,12 @@ namespace ApptentiveSample
                 var eventName = eventNameEditText.Text;
                 var canShowInteraction = Apptentive.CanShowInteraction(eventName);
                 Toast.MakeText(this, canShowInteraction ? "Yes" : "No", ToastLength.Long).Show();
+            };
+
+            var userDataButton = FindViewById<Button>(Resource.Id.userDataButton);
+            userDataButton.Click += delegate {
+                var intent = new Intent(this, typeof(UserDataActivity));
+                StartActivity(intent);
             };
 
             unreadMessagesTextView = FindViewById<TextView>(Resource.Id.unreadMessagesText);
