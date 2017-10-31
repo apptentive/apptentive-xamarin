@@ -17,7 +17,7 @@ namespace ApptentiveSample
         {
             base.OnCreate();
 
-            Apptentive.Register(this, "ANDROID-ANDROID-DEV-c9c0b324114f", "98f5539e9310dc290394c68b76664e98");
+            Apptentive.Register(this, "ANDROID-XAMARIN-ANDROID", "22527498ae05c9605dd746cd7c5cb33c");
         }
     }
 
