@@ -18,7 +18,7 @@ namespace ApptentiveSample
             base.OnCreate();
 
             ApptentiveLog.OverrideLogLevel(ApptentiveLog.Level.VeryVerbose);
-            Apptentive.Register(this, "ANDROID-XAMARIN-ANDROID", "22527498ae05c9605dd746cd7c5cb33c");
+            Apptentive.Register(this, "ANDROID-XAMARIN-ANDROID", "22527498ae05c9605dd746cd7c5cb33c"); // FIXME: remove keys
         }
     }
 

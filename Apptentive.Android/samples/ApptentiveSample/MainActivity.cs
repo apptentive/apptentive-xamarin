@@ -55,6 +55,7 @@ namespace ApptentiveSample
             var authenticationButton = FindViewById<Button>(Resource.Id.authenticationButton);
             authenticationButton.Click += delegate {
                 var intent = new Intent(this, typeof(LoginActivity));
+                intent.PutExtra(LoginActivity.EXTRA_JWT_SECRET, "cd2680c7d8ab3bfd6f7ad2b1be328885"); // FIXME: remove secret key
                 StartActivity(intent);
             };
 
