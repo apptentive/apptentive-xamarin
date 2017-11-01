@@ -17,8 +17,21 @@ namespace ApptentiveSample
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
+            EngageButton.TouchUpInside += delegate {
+                var eventName = EventNameTextField.Text;
+                Apptentive.Shared.Engage(eventName, this);
+            };
+
             MessageCenterButton.TouchUpInside += delegate {
                 Apptentive.Shared.PresentMessageCenter(this);
+            };
+
+            CanShowInteractionButton.TouchUpInside += delegate {
+                var eventName = EventNameTextField.Text;
+                var canShow = Apptentive.Shared.CanShowInteraction(eventName);
+                var alertController = UIAlertController.Create("Apptentive", canShow ? "Yes" : "No", UIAlertControllerStyle.Alert);
+                alertController.AddAction(UIAlertAction.Create("Close", UIAlertActionStyle.Cancel, (obj) => alertController.DismissViewController(true, null)));
+                PresentViewController(alertController, true, null);
             };
         }
 

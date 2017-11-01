@@ -14,29 +14,75 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="97.5" y="318.5" width="180" height="30"/>
-                                <state key="normal" title="Show Message Center">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections/>
-                                <constraints>
-                                    <constraint id="1433" firstItem="197" firstAttribute="height" constant="30"/>
-                                    <constraint id="1434" firstItem="197" firstAttribute="width" constant="180"/>
-                                </constraints>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="1643" translatesAutoresizingMaskIntoConstraints="NO" distribution="equalSpacing" alignment="center">
+                                <rect key="frame" x="111.5" y="228.5" width="152" height="210"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1653" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Event name">
+                                        <rect key="frame" x="28" y="0.0" width="96.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1647" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="50" y="30" width="52" height="30"/>
+                                        <state key="normal" title="Engage">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1651" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="20" y="60" width="112" height="30"/>
+                                        <state key="normal" title="Message Center">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1649" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="0.0" y="90" width="152" height="30"/>
+                                        <state key="normal" title="Can show interaction?">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1650" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="41.5" y="120" width="69" height="30"/>
+                                        <state key="normal" title="User Data">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1657" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="31" y="150" width="90" height="30"/>
+                                        <state key="normal" title="Custom Data">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1659" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="26" y="180" width="100" height="30"/>
+                                        <state key="normal" title="Authentication">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="CustomDataButton_TouchUpInside:" destination="1661" id="1660" eventType="touchUpInside"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint id="1432" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="1435" firstItem="197" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY"/>
+                            <constraint id="1644" firstItem="1643" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="1645" firstItem="1643" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="MessageCenterButton" destination="197" id="name-outlet-197"/>
+                        <outlet property="EngageButton" destination="1647" id="name-outlet-1647"/>
+                        <outlet property="MessageCenterButton" destination="1651" id="name-outlet-1651"/>
+                        <outlet property="CanShowInteractionButton" destination="1649" id="name-outlet-1649"/>
+                        <outlet property="UserDataButton" destination="1650" id="name-outlet-1650"/>
+                        <outlet property="CustomDataButton" destination="1657" id="name-outlet-1657"/>
+                        <outlet property="AuthenticationButton" destination="1659" id="name-outlet-1659"/>
+                        <outlet property="EventNameTextField" destination="1653" id="name-outlet-1653"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

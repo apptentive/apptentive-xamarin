@@ -15,13 +15,67 @@ namespace ApptentiveSample
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton AuthenticationButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton CanShowInteractionButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton CustomDataButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton EngageButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField EventNameTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton MessageCenterButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton UserDataButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (AuthenticationButton != null) {
+                AuthenticationButton.Dispose ();
+                AuthenticationButton = null;
+            }
+
+            if (CanShowInteractionButton != null) {
+                CanShowInteractionButton.Dispose ();
+                CanShowInteractionButton = null;
+            }
+
+            if (CustomDataButton != null) {
+                CustomDataButton.Dispose ();
+                CustomDataButton = null;
+            }
+
+            if (EngageButton != null) {
+                EngageButton.Dispose ();
+                EngageButton = null;
+            }
+
+            if (EventNameTextField != null) {
+                EventNameTextField.Dispose ();
+                EventNameTextField = null;
+            }
+
             if (MessageCenterButton != null) {
                 MessageCenterButton.Dispose ();
                 MessageCenterButton = null;
+            }
+
+            if (UserDataButton != null) {
+                UserDataButton.Dispose ();
+                UserDataButton = null;
             }
         }
     }
