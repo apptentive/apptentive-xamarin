@@ -46,7 +46,8 @@ Find a place in your app where you can add a button that opens Message Center. Y
 
 ```
 var messageCenterButton = FindViewById<Button>(...);
-messageCenterButton.Click += delegate {
+messageCenterButton.Click += delegate
+{
     Apptentive.ShowMessageCenter(context);
 };
 ```
@@ -83,7 +84,8 @@ public class MainActivity : Activity, IUnreadMessagesListener
 
     public void OnUnreadMessageCountChanged(int count)
     {
-        RunOnUiThread(delegate () {
+        RunOnUiThread(delegate ()
+        {
             unreadMessagesTextView.Text = "Unread messages: " + Apptentive.UnreadMessageCount;
         });
     }
@@ -98,7 +100,8 @@ Events record user interaction. You can use them to determine if and when an Int
   
 ```
 var engageButton = FindViewById<Button>(...);
-engageButton.Click += delegate {
+engageButton.Click += delegate
+{
     Apptentive.Engage(this, "my_event");
 };
 ```
