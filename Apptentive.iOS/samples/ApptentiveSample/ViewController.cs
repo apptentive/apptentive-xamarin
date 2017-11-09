@@ -40,5 +40,18 @@ namespace ApptentiveSample
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+
+        public override void PrepareForSegue(UIStoryboardSegue segue, Foundation.NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            DataViewController VC = (DataViewController)segue.DestinationViewController;
+
+            if (sender == UserDataButton) {
+                VC.Source = DataViewControllerSource.Person;
+            } else {
+                VC.Source = DataViewControllerSource.Device;
+            }
+        }
     }
 }
