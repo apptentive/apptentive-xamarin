@@ -9,8 +9,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>C# bindings for Apptentive SDK</description>
     <copyright>Copyright © Apptentive</copyright>
-    <projectUrl>https://components.xamarin.com/view/apptentiveios</projectUrl>
-    <licenseUrl>https://components.xamarin.com/license/apptentiveios</licenseUrl>
+    <projectUrl>https://github.com/apptentive/apptentive-xamarin/tree/master/Apptentive.iOS</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/apptentive/apptentive-xamarin/master/Apptentive.iOS/License.txt</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/apptentive/apptentive-xamarin/master/icons/apptentive-ios_128x128.png</iconUrl>
   </metadata>
   <files>
