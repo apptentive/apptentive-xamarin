@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!-- Remove non-public packages -->
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.adapter']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.comm']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.conversation']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.debug']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.encryption']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.lifecycle']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.listeners']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.migration']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.migration.v4_0_0']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.model']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction.fragment']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction.model']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction.model.common']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction.model.survey']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.interaction.view.survey']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.engagement.logic']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter.model']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter.view']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter.view.holder']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.metric']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.rating']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.rating.impl']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.rating.view']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.module.survey']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.storage.legacy']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.util.cache']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.util.threadingd']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.network']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.notifications']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.serialization']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.storage']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.util']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.util.image']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.util.task']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.util.threading']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.view']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk.widget']" />
+
+	<!-- Remove non-public classes -->
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveBaseActivity']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveInternal']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveBaseActivity']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveLogTag']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveNotifications']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveViewActivity']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='ApptentiveViewExitType']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive.DateTime']" />
+    <remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive.Version']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='BuildConfig']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='ApptentiveToastNotificationManager']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='MessageManager']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='MessagePollingWorker']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']/class[@name='OnListviewItemActionListener']" />
+
+	<!-- Remove deprecation -->
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive']/method[@name='setUnreadMessagesListener']" />
+	<remove-node path="/api/package[@name='com.apptentive.android.sdk']/class[@name='Apptentive']/method[@name='willShowInteraction']" />
+
+    <!-- Normalize namespace -->
+	<attr path="/api/package[@name='com.apptentive.android.sdk']" name="managedName">ApptentiveSDK.Android</attr>   
+	<attr path="/api/package[@name='com.apptentive.android.sdk.module.messagecenter']" name="managedName">ApptentiveSDK.Android</attr>   
+</metadata>

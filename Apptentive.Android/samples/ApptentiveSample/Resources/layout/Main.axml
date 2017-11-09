@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventEditText"
+        android:hint="Event Name" />
+    <Button
+        android:id="@+id/engageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Engage" />
+    <Button
+        android:id="@+id/messageCenterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Message Center" />
+    <Button
+        android:text="Can Show Interaction?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/canShowInteractionButton" />
+    <Button
+        android:text="User Data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userDataButton" />
+    <Button
+        android:text="Custom Data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customDataButton" />
+    <Button
+        android:text="Authentication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/authenticationButton" />
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/space1" />
+    <TextView
+        android:text="Unread message count: 0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/unreadMessagesText"
+        android:gravity="center" />
+</LinearLayout>
