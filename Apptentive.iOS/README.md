@@ -45,7 +45,8 @@ public partial class ViewController : UIViewController
     {
         base.ViewDidLoad();
 
-        MessageCenterButton.TouchUpInside += delegate {
+        MessageCenterButton.TouchUpInside += delegate
+        {
             Apptentive.Shared.PresentMessageCenter(this);
         };
     }
@@ -75,7 +76,8 @@ public partial class ViewController : UIViewController
         
         ...
         
-        NSNotificationCenter.DefaultCenter.AddObserver(Constants.ApptentiveMessageCenterUnreadCountChangedNotification, (NSNotification obj) => {
+        NSNotificationCenter.DefaultCenter.AddObserver(Constants.ApptentiveMessageCenterUnreadCountChangedNotification, (NSNotification obj) =>
+        {
             UnreadMessagesTextView.Text = "Unread messages: " + Apptentive.Shared.UnreadMessageCount;
         });
     }
@@ -88,7 +90,8 @@ Events record user interaction. You can use them to determine if and when an Int
   
 ```
 var engageButton = FindViewById<Button>(...);
-engageButton.Click += delegate {
+engageButton.Click += delegate
+{
     Apptentive.Shared.Engage("my_event", this); // assuming 'this' is a ViewController
 };
 ```
