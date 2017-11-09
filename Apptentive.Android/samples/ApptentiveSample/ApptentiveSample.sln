@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApptentiveSample", "ApptentiveSample.csproj", "{1D0FD7B6-5A38-40F3-AA08-DD648C47ACFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apptentive.Android", "..\..\source\Apptentive.Android.csproj", "{42BDBB53-FC01-4241-B8BE-EF2454835C0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D0FD7B6-5A38-40F3-AA08-DD648C47ACFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0FD7B6-5A38-40F3-AA08-DD648C47ACFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0FD7B6-5A38-40F3-AA08-DD648C47ACFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0FD7B6-5A38-40F3-AA08-DD648C47ACFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BDBB53-FC01-4241-B8BE-EF2454835C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BDBB53-FC01-4241-B8BE-EF2454835C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BDBB53-FC01-4241-B8BE-EF2454835C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BDBB53-FC01-4241-B8BE-EF2454835C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

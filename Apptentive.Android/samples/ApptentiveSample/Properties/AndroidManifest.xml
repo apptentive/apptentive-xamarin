@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.apptentive.ApptentiveSample">
+	<uses-sdk android:minSdkVersion="16" />
+	<application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name">
+		<activity android:name=".UserDataActivity"
+			      android:label="User Data"
+                  android:theme="@style/ApptentiveTheme.Base.Versioned"/>
+		<activity android:name=".CustomDataActivity"
+			      android:label="Custom Data"
+                  android:theme="@style/ApptentiveTheme.Base.Versioned"/>
+		<activity android:name=".LoginActivity"
+                  android:label="Login/Logout"
+                  android:theme="@style/ApptentiveTheme.Base.Versioned"/>
+	</application>
+</manifest>
