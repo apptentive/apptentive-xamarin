@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Apptentive.iOS</id>
-    <title>Facebook SDK for Xamarin iOS</title>
+    <title>Apptentive SDK for Xamarin iOS</title>
     <version>$version$</version>
     <authors>Apptentive</authors>
     <owners>Apptentive</owners>
