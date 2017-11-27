@@ -1,3 +1,3 @@
 # Apptentive Xamarin SDK
-- [Xamarin.Android Apptentive SDK](Apptentive.Android)
-- [Xamarin.iOS Apptentive SDK](Apptentive.iOS)
+- [Xamarin.Android Apptentive SDK](https://github.com/apptentive/apptentive-xamarin-android)
+- [Xamarin.iOS Apptentive SDK](https://github.com/apptentive/apptentive-xamarin-ios)
